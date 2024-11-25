@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="web.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ShoppingCart.js"></script>
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding-top: 20px;
+        }
+         
+        .breadcrumb p {
+            margin: 5px;
+        }
+        .cart-header {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .cart-header button {
+            background-color: #f1dae3;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            float: right;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .cart-item img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+        .product-info {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .product-desc {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .product-price {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+        }
+        .product-quantity {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+        .quantity-btn {
+            padding: 5px;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .delete-btn {
+            cursor: pointer;
+            font-size: 24px;
+            color: #555;
+            margin-left: 15px;
+        }
+
+               .checkout-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top:50px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+        .total-price {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .checkout-btn {
+            
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 8px;
+            text-align: center;
+        }
+       .thank-you-message {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;        }
+        h1 {
+            color: black;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .return-link {
+            margin-top: 30px;
+            padding: 10px 20px;
+                               }
+      
+    </style>
+</head>
+<body>
+<header>
+ <div>
+  <h1> <img src="img/logo.png" alt="logo" class="logo"> shopSphere</h1>
+  <a href="cart.html"><img src="img/cart.png" alt="cart" class="cart"></a>
+ </div>
+
+ <nav>
+  <ul>
+   <li><a href="HomePage.html">Home</a></li>
+   <li><a href="user.html"  class="currentPage">Customer page</a></li>
+   <li><a href="SellerDashboard.html">Seller dashboard</a></li>
+   <li><a href="electronic.html">Electronics</a></li>
+   <li><a href="makeUp.html">Makeup</a></li>
+   <li><a href="perfume.html">Perfumes</a></li>
+  </ul>
+ </nav>
+</header>
+
+ <div class="breadcrumb">
+       
+    <a href="Homepage.html">Home</a><span> &gt;&gt;</span><a href="user.html">Customer page</a> <span> &gt;&gt;</span><span id="thispage">cart page</span>
+    </div>
+    
+   <div class="container">
+        <!-- Cart Header -->
+        <div class="cart-header">
+            Shopping Cart
+            <button class="empty-cart">empty cart</button>
+        </div>
+<div id="cart-items"></div>
+        <!-- Cart Items -->
+        <div class="cart-item">
+            </div>
+            
+        </div>
+
+            
+       
+
+
+
+        
+
+        <div class="checkout-section">
+            <button class="checkout-btn">Checkout</button>
+            <div class="total-price"></div>
+        </div>
+
+
+
+ 
+
+
+<footer>
+ <p id="copyRights">&copy;2024/ShopSphere comapny.<br> all rights are reserved</p>
+ 
+  <p>
+   <img src="img/phone.png" alt="phone">
+   (123) 456-7890
+  </p>
+   
+  <p>
+   <img src="img/Email.png" alt="email">
+   <a href="mailto:shopSphere@gmail.com">shopSphere@gmail.com</a>
+  </p>
+ 
+ <div id="socialMedia">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="img/insta.png" alt="Instagram">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="img/x.png" alt="X (formerly Twitter)">
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank">
+            <img src="img/whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+  <hr>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Make/Delete offer</title>
+	<link rel="stylesheet" href="web.css">
+	<style>
+
+		main {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			margin: 20px auto;
+			width: 100%;
+			padding: 1rem
+		}
+			
+		
+		#header-container1{
+			position: static;
+			display: flex;
+			align-items: center;
+			gap: 1.25rem;
+			width: 37.5rem;
+			border: 1px double #f1dae3;
+			box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+			border-radius: 0.25rem;
+			margin-left: 0.625rem;
+			margin-bottom: 0.625rem;
+			margin-top: 1.25rem;
+		}
+
+		#sellerlogo {
+			margin-top: 2.5rem;
+			margin-left: 1.25rem; 
+			margin-bottom: 2.5rem;
+			border-radius: 0.625rem;
+			height: 9.375rem; 
+			width: 9.375rem;
+			border: 1px double #f1dae3;
+			box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+			position:static
+		}
+		
+		#sellerInfo {
+			flex: 1;
+		}
+		
+		#sellerOffer {
+		  display: flex;
+		  justify-content: flex-end;
+		  align-items: flex-start;
+		  flex-wrap: wrap;
+		  margin-top: 0.625rem;
+		  max-width: 100%;
+		  padding: 0 1.2rem;
+		}
+		
+		.offerCheck {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 16%;
+			min-width: 12.5rem;
+			margin-top: 0.3125rem;
+			
+		}
+
+		.offerCheck div {
+			width: 15%;
+			min-width: 11.875rem;
+			height: auto;
+			text-align: left;
+			padding: 1.25rem 0.625rem 2.5rem;
+			background-color: #fafafa;
+			border-style: ridge;
+			border-width: 0.0625rem 0.125rem 0.125rem; 
+			border-color: #ddd;
+			margin-bottom: 0.625rem;
+		}
+		
+		.offerCheck div p {
+			font-size: 0.9375rem;
+		    overflow-wrap: break-word;
+		}
+
+		.offerCheck img {
+		  width: 10.625rem;
+		  height: 10.625rem;
+		  margin-bottom: 0.3125rem;
+		}
+		
+		.offerCheck h2 {
+			font-size: 0.9375rem; 
+			overflow-wrap: break-word;
+		} 
+		
+		.label h2 {
+			font-size: 1.25rem;
+		}
+				
+		button {
+		    display: inline-block;
+		    align-self: flex-end;
+			padding: 0.3125rem 0.9375rem;
+			font-size: 0.9375rem;
+			margin-top: 1.25rem;
+			margin-right: 1.25rem;
+		}
+		
+		input[type="submit"] {
+			float: right;
+			padding: 0.3125rem 0.9375rem;
+			font-size: 0.9375rem;
+			margin-top: 1.25rem;
+			background-color: rgba(198, 111, 127, 1);
+			border: 0.125rem solid  #f1dae3;
+			color:white;
+			transition-duration: 0.5s;
+			border-radius: 0.625rem;
+			cursor: pointer;
+		}
+		
+		input[type="submit"]:hover {
+			background-color: #f1dae3;
+			border: 2px solid rgba(198, 111, 127, 1);
+			color: #081833;
+		}
+
+		form {
+			display: flex;
+			justify-content: space-around;
+			align-items: flex-end;
+			flex-wrap: wrap;
+		}
+		
+		box4 {
+			align-self: flex-end;
+		}
+		
+		
+		fieldset {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			border-style: ridge;
+			border-width: 0.0625rem 0.125rem 0.3125rem; 
+			margin-top: 1.25rem;
+			padding: 0.625rem 0.625rem 0.3125rem;
+			margin-left: 0.625rem;
+			min-width: 12.5rem;
+		}
+		
+		
+		fieldset label{
+			font-size: 0.9375rem;
+			text-align: left;
+		}
+		
+		input[type="text"], input[type="file"] {
+			width: 24.3rem;
+			height: 1.875rem;
+			padding: 0.2rem;
+		}
+		
+		#nameNotValid,#imgNotValid, #descNotValid {
+			color: grey;
+			font-size: 0.9375rem;
+		}
+		
+	</style>
+</head>
+
+<body>
+
+<header>
+
+ <div>
+  <h1> <img src="img/logo.png" alt="logo" class="logo"> ShopSphere</h1>
+  <a href="cart.html"><img src="img/cart.png" alt="cart" class="cart"></a>
+ </div>
+
+ 
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="HomePage.html" accesskey="h">Home</a></li>
+            <li><a href="user.html" accesskey="c">Customer page</a></li>
+            <li><a href="SellerDashboard.html" accesskey="s" class="currentPage">Seller dashboard</a></li>
+            <li><a href="electronic.html" accesskey="e">Electronics</a></li>
+            <li><a href="makeUP.html" accesskey="m">Makeup</a></li>
+            <li><a href="perfume.html" accesskey="p">Perfumes</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="breadcrumb">
+        <a href="Homepage.html" accesskey="h">Home</a><span> &gt;&gt; </span><a href="SellerDashboard.html"> SellerDashboard</a><span> &gt;&gt; </span><span id="thispage">Make/Delete offer</span> 
+    </div>
+	
+	<div id='header-container1'>   
+		<img id="sellerlogo" src="img/diorlogo3.png" alt="Dior logo" width = "150" height = "150">
+
+		<div id='sellerInfo'>
+	  		 <h1>Christian Dior</h1>
+	   </div>
+	</div>  
+	
+	<br>
+	<h2 class="label">Delete offer </h2>
+	<hr>
+	
+	
+	<section id="sellerOffer" >
+	
+		<div class="offerCheck">
+		<div>
+			<img src="img/offer1.jpg" alt="offer1">			
+			<h2>30% Off lip products!</h2>
+			<br>
+			<p>Enjoy 30% off on all ChristianDior lip products.</p>
+		</div>
+		<input type="checkbox" name="offer" value="offer1" checked>
+		</div>
+		
+		<div class="offerCheck">
+		<div>
+			<img src="img/offer5.jpg" alt="offer2"> 
+			<h2>25% Off Perfumes!</h2>
+			<br>
+			<p>Discover luxury with 25% off Christian Dior Perfumes.</p>
+		</div>
+		<input type="checkbox" name="offer" value="offer2">
+		</div>
+
+		<div class="offerCheck">
+		<div>
+			<img src="img/offer2.jpg" alt="offer3"> 
+			<h2>Buy 2, Get 1 Free! </h2>
+			<br>
+			<p>Stock up on Christian Dior Makeup: buy 2, get 1 free.</p>
+		</div>
+		<input type="checkbox" name="offer" value="offer3" checked>
+		</div>
+
+		<div class="offerCheck">
+		<div>
+			<img src="img/offer3.jpg" alt="offer4"> 
+			<h2>Free Shipping for orders over 200 SR!</h2>
+			<br>
+			<p>Enjoy free shipping for orders over 200 SR.</p>
+		</div>
+		<input type="checkbox" name="offer" value="offer4">
+		</div>
+		
+		<div class="offerCheck">
+		<div>
+			<img src="img/offer4.jpg" alt="offer5"> 
+			<h2>10% Off Christian dior!</h2>
+			<br>
+			<p>Upgrade your collection with 10% off all Christian Dior products.</p>
+		</div>
+		<input type="checkbox" name="offer" value="offer5">
+		</div>	
+			
+		<div class="offerCheck">	
+		<div>
+			<img src="img/offer6.jpg" alt="offer6"> 
+			<h2>Buy One, Get the Second 50% Off!</h2>
+			<br>
+			<p>Buy Christian Dior perfume, get the second at half price.</p>
+		</div>
+		<input type="checkbox" name="offer" value="offer6">
+		</div>
+		
+	</section>
+	<button onclick="deleteOffer()">Delete</button>
+
+	<h2 class="label">Make offer </h2>
+	<hr>
+	
+	<form action="" onsubmit="addOffer(); return false;">
+		<fieldset>
+			<label for="name">Offer name</label>
+			<br>
+			<input type="text" id="name" name="name" value="" size= 20>
+			<span id="nameNotValid"></span>
+		</fieldset>
+				
+		<fieldset>
+				<label for="image">Offer image</label>
+				<br>
+				<input type="file" id="image" name="image">
+				<span id="imgNotValid"></span>
+		</fieldset>
+				
+		<fieldset>
+			<label for="Description">Description</label>
+			<br>
+			<input type="text" id="Description" name="Description" value="">
+			<span id="descNotValid"></span>			
+		</fieldset>
+		<input type="submit" value="Submit">		
+	</form> 
+	
+</main>
+
+<footer>
+	<p id="copyRights">&copy;2024/ShopSphere comapny.<br> all rights are reserved</p>
+	
+		<p>
+			<img src="img/phone.png" alt="phone">
+			(123) 456-7890
+		</p>
+			
+		<p>
+			<img src="img/Email.png" alt="email">
+			<a href="mailto:shopSphere@gmail.com">shopSphere@gmail.com</a>
+		</p>
+	
+	<div id="socialMedia">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="img/insta.png" alt="Instagram">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="img/x.png" alt="X (formerly Twitter)">
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank">
+            <img src="img/whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+  <hr>
+</footer>
+
+<script src="DScript.js"></script>
+
+</body>
+</html>

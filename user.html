@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1"  >
+    <link rel="stylesheet" href="web.css">
+    <title>User Page</title>
+    <style>
+        body {
+            
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .breadcrumbl {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: left;
+            font-size: 14px;
+            color: #333;
+        }
+        .breadcrumbl p {
+            margin: 0;
+        }
+        .user-infol {
+            display: flex;
+            align-items: center;
+            margin: 40px 0;
+            width: 80%;
+        }
+        .user-infol .profile-pic {
+            width: 150px; 
+            height: 150px; 
+            border: 1px solid #ccc;
+            margin: 20px 20px;
+        }
+        .user-infol .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .user-infol .detailsl {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .user-infol .detailsl strong {
+            font-size: 22px;
+        }
+        .separatorl {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            margin: 20px;
+        }
+        .user-actionsl {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 800px;
+            margin: 0px auto;
+            padding: 30px 0;
+            gap: 100px;
+            
+        }
+        .user-actionsl .actionl {
+            text-align: center;
+        }
+        .user-actionsl .actionl a {
+            display: flex;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .user-actionsl .actionl a img {
+            width: 150px; 
+            height: 150px;
+            margin-bottom: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+        .user-actionsl .actionl p {
+            font-size: 14px;
+            margin: 0;
+            padding-top: 5px;
+          }
+       
+    </style>
+</head>
+<body>
+
+<header>
+    <div>
+        <h1><img src="img/logo.png" alt="logo" class="logo"> ShopSphere</h1>
+        <a href="cart.html"><img src="img/cart.png" alt="cart" class="cart"></a>
+    </div>
+
+   
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="HomePage.html" accesskey="h">Home</a></li>
+            <li><a href="user.html" accesskey="c" class="currentPage">Customer page</a></li>
+            <li><a href="SellerDashboard.html" accesskey="s">Seller dashboard</a></li>
+            <li><a href="electronic.html" accesskey="e">Electronics</a></li>
+            <li><a href="makeUP.html" accesskey="m" >Makeup</a></li>
+            <li><a href="perfume.html" accesskey="p">Perfumes</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <div class="breadcrumb">
+        <a href="Homepage.html" accesskey="h">Home</a><span> &gt;&gt; </span><span id="thispage">Customer page</span> 
+    </div>
+
+<div class="user-infol">
+    <div class="profile-pic">
+        <img src="img/user9.png" alt="User Profile Picture" >
+    </div>
+    <div class="detailsl">
+        <p><strong>Bella Hadid</strong></p>
+        <p>sh1234.email@example.com</p>
+        <p>+966 456 7890</p>
+    </div>
+</div>
+<hr style="margin-top: 20px;
+				margin-bottom: 20px;
+				height: 5px;
+				background-color: rgba(198, 111, 127, 1);
+				width:100%;">
+<div class="user-actionsl">
+    <div class="actionl">
+        <a href="cart.html">
+            <img src="img/cart1.png" alt="Cart Icon" >
+        </a>
+        <h3 class=main-name>Cart</h3>
+<p>View, edit, and checkout for cart!</p>
+    </div>
+    <div class="actionl">
+        <a href="eval.html">
+            <img src="img/eval.jpg" alt="Product Evaluation Icon" >
+        </a>
+        <h3 class=main-name>Product Evaluation</h3>
+<p>Share your experience and rate the product!</p>
+    </div>
+    <div class="actionl">
+        <a href="orders.html">
+            <img src="img/myOrders.jpg" alt="My Orders Icon" >
+        </a>
+        <h3 class=main-name>My Orders</h3>
+<p>Check order history and progress!</p>
+    </div>
+</div>
+
+<footer>
+    <p id="copyRights">&copy;2024/ShopSphere company.<br>All rights are reserved</p>
+
+    <p>
+        <img src="img/phone.png" alt="phone">
+        (123) 456-7890
+    </p>
+
+    <p>
+        <img src="img/Email.png" alt="email">
+        <a href="mailto:shopSphere@gmail.com">shopSphere@gmail.com</a>
+    </p>
+
+    <div id="socialMedia">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="img/insta.png" alt="Instagram">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="img/x.png" alt="X (formerly Twitter)">
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank">
+            <img src="img/whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+    <hr>
+</footer>
+
+</body>
+</html>

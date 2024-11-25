@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1"  >
+    <title>ShopSphere </title>
+    <link rel="stylesheet" href="web.css">
+     <script src="p.js"></script>
+    <style>
+ 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.25rem;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    border: 0.063rem solid #ddd;
+    border-radius: 0.625rem;
+    width: 22%;
+    margin-bottom: 1.25rem;
+    padding: 0.938rem;
+    box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.product-card img {
+    object-fit: cover;
+    border-radius: 0.313rem;
+}
+
+.product-name {
+    display: flex;
+    margin: 0.625rem 0;
+}
+
+.product-price {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 0.875rem;
+    margin-bottom: 0.625rem;
+    display: flex;
+}
+
+.rating {
+    color: gold;
+    display: flex;
+    justify-content: right;
+}
+
+.star-empty {
+    color: #ccc;
+}
+button {
+	background-color: rgba(198, 111, 127, 1);
+	border: 0.125rem solid  #f1dae3;
+	color:white;
+	transition-duration: 0.5s;
+	border-radius: 0.625rem;
+	cursor: pointer;
+ padding: 0.438rem 0.75rem;
+  }
+.button {
+    padding: 0.438rem 0.75rem;
+}
+
+a  img {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.sort-section {
+    float: right;
+    margin-left: 88%;
+}
+
+@media (max-width: 36rem) {
+    .product-card {
+        width: 100%;
+    }
+}
+
+.price-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.625rem 0;
+}
+
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+   
+}
+
+
+  </style>
+  
+</head>
+<body>
+<header>
+ <div>
+  <h1> <img src="img/logo.png" alt="logo" class="logo"> ShopSphere</h1>
+  <a href="cart.html"><img src="img/cart.png" alt="cart" class="cart"></a>
+ </div>
+
+ 
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="HomePage.html" accesskey="h">Home</a></li>
+            <li><a href="user.html" accesskey="c">Customer page</a></li>
+            <li><a href="SellerDashboard.html" accesskey="s">Seller dashboard</a></li>
+            <li><a href="electronic.html" accesskey="e"> Electronics</a></li>
+            <li><a href="makeUP.html" accesskey="m">Makeup</a></li>
+            <li><a href="perfume.html" accesskey="p"  class="currentPage">Perfumes</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <div class="breadcrumb">
+        <a href="Homepage.html" accesskey="h">Home</a><span> &gt;&gt; </span><span id="thispage">Perfumes</span> 
+    </div>
+
+
+   <div class="sort-section">
+        <label for="sort">Sort: </label>
+        <select id="sort">
+            <optgroup label="Price">
+                <option value="low-to-high">Low to High</option>
+                <option value="high-to-low">High to Low</option>
+            </optgroup>
+           
+            <optgroup label="Name">
+                <option value="a-z">A - Z</option>
+                <option value="z-a">Z - A</option>
+            </optgroup>
+            <optgroup label="rateing">
+                <option value="Highest-rate">Highest rate</option>
+                <option value="Lowest-rate">Lowest rate</option>
+            </optgroup>
+        </select>
+    </div>
+	
+    <div class="container">
+        <!-- Product 1 -->
+        <div class="product-card">           
+
+            <img src="img/m1.png" alt=" Yves Saint Laurent Libre">
+            <div class="rating">★★★★★</div>
+            <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span>
+            <h3 class="product-name"> Yves Saint Laurent Libre </h3>
+            <div class="price-cart">
+			  <div class="product-price">750 SR</div>  
+           <a href="#" class="button cart-icon">
+            <img src="img/cart.png" alt="Cart">
+        </a>
+      </div>
+            <div class="quantity-controls">
+        <button class="decrease">-</button>
+        <input type="number" class="quantity" value="1" min="1">
+        <button class="increase">+</button>
+            </div>
+            
+             <p class="product-description" >Libre is the perfume of a strong, bold, and free woman experimenting with her freedom to live everything extremely - Eau De Parfum 90ml</p>
+             
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="img/m2.png" alt="Jean Paul Gaultier Scandal">
+            <div class="rating">★★★★
+            <span class="star-empty">☆</span>
+           <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span>
+            </div>
+            <h3 class="product-name"> Jean Paul Gaultier Scandal</h3>
+            <div class="price-cart">
+                
+            <div class="product-price">500 SR</div>  
+			
+             <a href="#" class="button cart-icon">
+            <img src="img/cart.png" alt="Cart">
+        </a>
+            
+            </div>
+            <div class="quantity-controls">
+        <button class="decrease">-</button>
+        <input type="number" class="quantity" value="1" min="1">
+        <button class="increase">+</button>
+            </div>
+            <p class="product-description">Scandal embodies femininity, an elegant Parisian of the floral family with a sweet flavor that adds to you a sweet and sugary appearance - Eau De Perfum 50ml</p>
+            
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="img/m3.png" alt=" Giorgio Armani Vert Malachite ">
+            <div class="rating">★★★★
+            <span class="star-empty">☆</span>
+            <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span>
+            </div>
+            <h3 class="product-name">  Giorgio Armani Vert Malachite</h3>
+            <div class="price-cart">
+                
+            <div class="product-price">1460 SR</div>      
+			
+              <a href="#" class="button cart-icon">
+            <img src="img/cart.png" alt="Cart">
+        </a>
+     </div>
+            <div class="quantity-controls">
+        <button class="decrease">-</button>
+        <input type="number" class="quantity" value="1" min="1">
+        <button class="increase">+</button>
+            </div>
+             <p class="product-description">Vert Malachite is inspired by the vastness of Russia's magnificent landscapes. Ethereal and powerful, Vert Malachite reveals a very feminine sensuality For both sexes- Eau de Parfum 100ml</p>
+             
+        </div>
+        
+         <!-- Product 4 -->
+       <div class="product-card">
+        <img src="img/diorsavage.png" alt=" Dior Sauvage Elixi Image">
+        <div class="rating"> ★★★★★</div>
+        <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span>
+        <h3 class="product-name"> Dior Sauvage Elixi </h3>
+        <div class="price-cart">
+            
+        <div class="product-price">660 SR</div>        
+        
+              <a href="#" class="button cart-icon">
+            <img src="img/cart.png" alt="Cart">
+        </a>
+        
+        </div>
+        <div class="quantity-controls">
+        <button class="decrease">-</button>
+        <input type="number" class="quantity" value="1" min="1">
+        <button class="increase">+</button>
+            </div>
+         <p class="product-description">A bold and fresh scent inspired by nature, blending spicy bergamot and warm amberwood for a modern, masculine fragrance</p>
+   
+       </div>        
+        <!-- Product 5 -->
+        <div class="product-card">
+            <img src="img/m5.png" alt="Lancome La Vie Est Belle l'eclat Image">
+            <div class="rating"> ★★★
+            <span class="star-empty">☆☆</span>
+            <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span> 
+            </div>
+            <h3 class="product-name"> LancomeLa Vie Est Belle l'eclat</h3>
+            <div class="price-cart">
+                
+            <div class="product-price">638 SR</div>   
+			
+               <a href="#" class="button cart-icon">
+            <img src="img/cart.png" alt="Cart">
+        </a>    
+            
+            </div>
+            <div class="quantity-controls">
+        <button class="decrease">-</button>
+        <input type="number" class="quantity" value="1" min="1">
+        <button class="increase">+</button>
+            </div>
+             <p class="product-description" >La vie est belle L'Eclat L'Eau de Parfum is a radiant composition made of the noblest natural ingredients For Women - Eau De Perfum 75ml</p>
+        
+        </div>
+        <!-- Product 6-->
+        <div class="product-card">
+            <img src="img/msdior.png" alt=" Miss Dior Image">
+            <div class="rating">★★★★★</div>
+            <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span>  <span class="star-filled"></span> <span class="star-filled"></span>
+            <h3 class="product-name">Miss Dior</h3>
+            <div class="price-cart">
+                
+            <div class="product-price">485 SR</div>        
+            
+             <a href="#" class="button cart-icon">
+            <img src="img/cart.png" alt="Cart">
+        </a> 
+            </div>
+            <div class="quantity-controls">
+        <button class="decrease">-</button>
+        <input type="number" class="quantity" value="1" min="1">
+        <button class="increase">+</button>
+            </div>
+             <p class="product-description">An elegant and floral fragrance that combines delicate notes of peony and rose with white musk</p>
+               </div>
+        <!-- Product 7 -->
+        <div class="product-card">
+            <img src="img/m7.png" alt=" Dior Pure Poison Image">
+            <div class="rating">★★★★★</div>
+             <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span>
+            <h3 class="product-name"> Dior Pure Poison</h3>
+            <div class="price-cart">
+                
+            <div class="product-price">565 SR</div>        
+            
+          <a href="#" class="button cart-icon">
+            <img src="img/cart.png" alt="Cart">
+        </a>
+     </div>
+            <div class="quantity-controls">
+        <button class="decrease">-</button>
+        <input type="number" class="quantity" value="1" min="1">
+        <button class="increase">+</button>
+            </div>
+             <p class="product-description"> A fragrance that celebrates the purest form of seduction, exploring it is irresistible duality For Women - Eau de Parfum 50ml</p>
+       
+        </div>
+        <!-- Product 8 -->
+       <div class="product-card">
+            <img src="img/m8.png" alt="De Marly Delina ">
+            <div class="rating">★★★★★</div>
+            <span class="star-filled"></span> <span class="star-filled"></span>  <span class="star-filled"></span> <span class="star-filled"></span> <span class="star-filled"></span> 
+            <h3 class="product-name"> De Marly Delina</h3>
+            <div class="price-cart">
+                
+            <div class="product-price">1300 SR</div>        
+            
+         <a href="#" class="button cart-icon">
+            <img src="img/cart.png" alt="Cart">
+        </a>
+     </div>
+            <div class="quantity-controls">
+        <button class="decrease">-</button>
+        <input type="number" class="quantity" value="1" min="1">
+        <button class="increase">+</button>
+            </div>
+             <p class="product-description" >Delina is a fragrance that is both sweet and sensual, it is charming and firmly modern floral bouquet For Women- Eau De Perfum 75ml</p>
+      </div>
+         </div>
+
+
+<footer>
+ <p id="copyRights">&copy;2024/ShopSphere comapny.<br> all rights are reserved</p>
+ 
+  <p>
+   <img src="img/phone.png" alt="phone">
+   (123) 456-7890
+  </p>
+   
+  <p>
+   <img src="img/Email.png" alt="email">
+   <a href="mailto:shopSphere@gmail.com">shopSphere@gmail.com</a>
+  </p>
+ 
+ <div id="socialMedia">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="img/insta.png" alt="Instagram">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="img/x.png" alt="X (formerly Twitter)">
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank">
+            <img src="img/whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+  <hr>
+</footer>
+   
+   
+</body>
+</html>

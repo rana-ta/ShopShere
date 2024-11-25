@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>shopSphere</title>
+	<link rel="stylesheet" href="web.css">
+		<style>
+
+		main {
+			display: flex;
+			justify-content: space-between;
+			margin: 1.25rem auto;
+			width: 95%;
+			flex-wrap: wrap;
+		}
+		
+		#vision, #category, #offer {
+			margin-bottom: 1.875rem;
+		}
+
+		#vision {
+			background-color: #f9f0f4;
+			padding: 1.25rem;
+			box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+			border-radius: 0.625rem;
+			text-align: left;
+			display: flex;
+			align-items:flex-start;
+			flex-wrap:wrap;
+		}
+
+		#category{
+		  display: flex;
+		  justify-content: center;
+		  margin-bottom: 1.25rem;
+		  align-items:center;
+		  flex-wrap: wrap;
+		}
+
+		#category div{
+			background-color: #f0f0f0;
+			width: 25%;
+			min-width: 18.75rem;
+			text-align: center;
+			padding: 0.9375rem;
+			border-style: ridge;
+			border-width: 0.0625rem 0.125rem 0.3125rem; 
+			border-color: #ddd;
+			box-sizing: border-box;
+			margin: 0.625rem 0.4rem 0;
+		}
+		
+		#category div a{
+			text-decoration: none;
+		}
+
+		#category img {
+		  width: 15.625rem;
+		  height: 15.625rem;
+		  margin-top: 0.625rem;
+		}
+		
+		#category h2 {
+		font-size: 1.25rem;
+		}
+		
+		#moreOffers {
+		  display: flex;
+		  justify-content: center;
+		  align-items:center;
+		  flex-wrap: wrap;
+		}
+		
+		#offer {
+		  display: flex;
+		  justify-content: center;
+		  align-items:flex-end;
+		  flex-wrap: wrap;
+		}
+
+		#offer div{
+			width: 25%;
+			min-width: 18.75rem;
+			height: 25rem;
+			text-align: left;
+			margin: 0.625rem 0.4rem 0.6rem;
+			padding: 1.25rem 0.625rem 2.5rem;
+			background-color: #f0f0f0;
+			border-style: ridge;
+			border-width: 0.0625rem 0.125rem 0.3125rem; 
+			border-color: #ddd;
+			display: none;
+		}
+		
+		#offer div.active{
+			display: block;
+		}
+		
+		#offer div p {
+			font-size: 1rem;
+		}
+
+		#offer img {
+		  width: 15.625rem;
+		  height: 15.625rem;
+		  margin-bottom: 0.3125rem;
+		  margin-left: 0.7rem;
+		}
+		
+		#offer h2 {
+		font-size: 1.3rem;
+		}
+		
+		#mainContent {
+			flex: 3;
+			margin-bottom: 1rem;
+		}
+
+		.sidebar {
+			flex: 0 0 25rem;
+			background-color: #ffffff;
+			box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+			padding: 1rem 1rem 0.3rem;
+			margin-left: 1.875rem;
+			margin-top: 4.375rem;
+			font-size: 0.875rem;
+			max-height: 42rem;
+		}
+		
+		.sidebar div {
+			display: flex;
+		}
+		
+		.sidebar h3 {
+			text-align: left;
+			margin-bottom: 0.9375rem;
+		}
+
+		.sidebar img {
+			width: 3.125rem;
+			height: 3.125rem;
+			border-radius: 50%;
+			margin-bottom: 0.5rem;
+		} 
+		
+		.sidebar h3 {
+			font-size: 1.25rem;
+		}
+		
+		.text {
+			flex-wrap: wrap;
+		}
+		
+		.product {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-left: 10rem; 
+			position: relative;
+		}
+		
+		.product img {
+			width: 3.5rem;
+			height: 3.5rem;
+			object-fit: cover; 
+		}
+		
+		.ratingC {
+			display: flex;
+			align-items: flex-start;
+		}
+		
+		.fullRating {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 0.5rem;
+		}
+				
+		.rating {
+			color: gold;
+		}     
+				
+		.star-empty{
+			color: #ccc;
+		}
+		
+		.sidebar .rating, .star-empty {
+			font-size: 1.25rem;
+		}
+		
+		.sidebar hr {
+			margin-bottom: 1.25rem;
+		}
+		
+		button {
+			padding: 0.3rem 0.7rem;
+			font-size: 0.7rem;
+	    }
+		
+		#topBar {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			padding: 0.1rem 0.5rem;
+			background-color: #f9f0f4;
+			flex-wrap: wrap;
+		}
+		
+		#weekDate {
+			margin-right: 42rem;
+		}
+		
+		#weekDate: last-child {
+			margin-right: 0;
+		}
+				
+		body.darkMode #topBar {
+			background-color: #905b72;
+		}
+		
+		
+		body.darkMode #weekDate {
+			color: #f1dae3;
+		}
+		
+		.arrowDown::after {
+		  content: "▼";
+		}
+
+		.arrowUp::after {
+		  content: "▲";
+		}
+		
+		#arrow {
+			padding: 0.3rem 0.7rem;
+			font-size: 1rem;	
+		}
+		
+		@media only screen and (max-width: 768px) {
+        main {
+            flex-direction: column; 
+        }
+
+        #category div {
+            width: 100%; 
+            margin-top: 1rem; 
+        }
+
+        #offer div {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        img {
+            max-width: 100%; 
+            height: auto; 
+        }
+
+        #category img, #offer img {
+            width: 100%; 
+            max-width: none; 
+            margin: 0;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+
+        #mainContent {
+            width: 100%;
+        }
+
+        #offer div {
+            width: 100%; 
+        }
+
+        #category div {
+            width: 100%; 
+        }
+
+        img {
+            max-width: 100%; 
+            height: auto; 
+        }
+
+        #category img, #offer img {
+            width: 100%; 
+            max-width: none;
+            margin: 0;
+        }
+
+        h2, p {
+            font-size: 1rem; 
+        }
+		
+    }
+		
+	</style>
+</head>
+    
+
+<body>
+
+	<div id='topBar'>
+		<div id='weekDate'></div>
+		<button onclick="Theme()">☾</button>
+	</div>
+	
+<header>
+	
+	
+	<div>
+		<h1> <img src="img/logo.png" alt="logo" class="logo"> shopSphere</h1>
+		<a href="cart.html"><img src="img/cart.png" alt="cart" class="cart"></a>
+	</div>
+
+	<nav>
+		<ul>
+			<li><a href="HomePage.html" class="currentPage">Home</a></li> 		
+			<li><a href="user.html">Customer page</a></li>
+			<li><a href="SellerDashboard.html">Seller dashboard</a></li>
+			<li><a href="electronic.html">Electronics</a></li>
+			<li><a href="makeUp.html">Makeup</a></li>
+			<li><a href="perfume.html">Perfumes</a></li>
+		</ul>
+	</nav>
+</header>
+
+
+<main>
+	
+<div id="mainContent">	
+    
+	<div class="breadcrumb">
+        <span id="thispage">Home</span> 
+    </div>
+		
+		<div id="vision">
+			<h2 style="font-size: 1.875rem;">Vision</h2>	
+			<p>Welcome to shopSphere, your ultimate online marketplace for perfumes, makeup and electronics. We provide a seamless shopping experience by offering adiverse range of high-quality products from trusted sellers. Explore our six exclusive offers, designed to help you find the best deals on the products you love, while enjoying simplicity and convenience. At shopSphere, we connect buyers and sellers effortlessly, ensuring you always have access to the best shopping opportunities.</p>
+		</div>
+		
+		<section id="category">
+			<div>
+				<a href="electronic.html">
+					<h2>Electronics</h2>
+					<img src="img/category1.jpg" alt="Electronics">
+				</a>
+			</div>
+			
+			<div>
+				<a href="makeUp.html">
+					<h2>Makeup</h2>
+					<img src="img/category2.jpg" alt="Makeup">
+				</a>
+			</div>
+			
+			<div>
+				<a href="perfume.html">
+					<h2>Perfume</h2>
+					<img src="img/category3.jpg" alt="Perfume">
+				</a>
+			</div>
+		</section>
+		<hr>
+		<br>
+		<section id="moreOffers">
+			
+			<section id="offer">
+				<div>
+					<img src="img/offer1.jpg" alt="offer1">			
+					<h2>30% Off Hair tools!</h2>
+					<br>
+					<p>Transform your hair with heated hair tools with up to 30% off.</p>
+				</div>
+					
+				<div>
+					<img src="img/offer5.jpg" alt="offer2"> 
+					<h2>25% Off Perfumes!</h2>
+					<br>
+					<p>Discover luxury with 25% off YSL fragrances.</p>
+				</div>
+
+				<div>
+					<img src="img/offer2.jpg" alt="offer3"> 
+					<h2>Buy 2, Get 1 Free! </h2>
+					<br>
+					<p>Stock up on Christian Dior Makeup: buy 2, get 1 free.</p>
+				</div>
+				
+				<div>
+					<img src="img/offer3.jpg" alt="offer4"> 
+					<h2>Free Shipping for orders over 200 SR!</h2>
+					<br>
+					<p>Enjoy free shipping for orders over 200 SR.</p>
+				</div>
+					
+				<div>
+					<img src="img/offer4.jpg" alt="offer5"> 
+					<h2>10% Off Christian dior!</h2>
+					<br>
+					<p>Upgrade your collection with 10% off all Christian Dior products.</p>
+				</div>
+			
+				<div>
+					<img src="img/offer6.jpg" alt="offer6"> 
+					<h2>Buy One, Get the Second 50% Off!</h2>
+					<br>
+					<p>Buy armani perfume, get the second at half price.</p>
+				</div>
+			</section>
+			
+			<button onclick="showAll()" id="arrow"></button>
+		
+		</section>
+	</div>
+	
+  <aside class="sidebar">
+  <h3>Customer Reviews</h3>
+	<br>
+	<div>
+        <img src="img/user9.png" alt="User1">
+		<div class="fullRating">
+		<div class="ratingC">
+		<span class="rating">★★★★★</span>
+		</div>
+        <div class="text">
+            <pre><br><strong>Noor:</strong></pre>
+            <p>I am very satisfied with the product quality and service!</p>
+        </div>
+		</div>
+        <div class="product">
+ 		<img src="img/p1.png" alt="product1"> 
+		<p>Dior Lip Maximizer</p>
+        </div>
+    </div>
+	<hr>
+	<div>
+        <img src="img/user9.png" alt="User2">
+		<div class="fullRating">
+		<div class="ratingC">
+		<span class="rating">★★★★</span><span class="star-empty">☆</span>
+		</div>
+		<div class="text">
+            <pre><br><strong>Sara:</strong></pre>
+            <p>The product was decent but arrived late.</p>
+        </div>
+		</div>
+		<div class="product">
+ 		<img src="img/m1.png" alt="product2"> 
+		<p>Yves Saint Laurent Libre</p>
+        </div>
+    </div>
+	<hr>
+	<div>
+        <img src="img/user9.png" alt="User3">
+		<div class="fullRating">
+        <div class="ratingC">
+		<span class="rating">★★★★★</span>
+		</div>
+		<div class="text">
+            <pre><br><strong>Leena:</strong></pre>
+            <p>I loved everything about this product!</p>
+        </div>
+		</div>
+		<div class="product">
+			<img src="img/p11.png" alt="product3"> 
+			<p>Revolution Eyeshadow</p>
+        </div>
+    </div>
+	<hr>
+	<div>
+		<img src="img/user9.png" alt="User4">
+		<div class="fullRating">
+		<div class="ratingC">
+		<span class="rating">★★★</span><span class="star-empty">☆☆</span>
+		</div>
+		<div class="text">
+			<pre><br><strong>Omar:</strong></pre>
+			<p>Good value for money, but could improve<br> packaging.</p>
+		</div>
+		</div>
+		<div class="product">
+			<img src="img/e1.png" alt="product4"> 
+			<p>Imou Camera</p>
+		</div>
+	</div>
+	<hr>
+	<div>
+		<img src="img/user9.png" alt="User5">
+		<div class="fullRating">
+		<div class="ratingC">
+		<span class="rating">★★★★</span><span class="star-empty">☆</span>
+		</div>
+		<div class="text">
+			<pre><br><strong>Amal:</strong></pre>
+			<p>The product exceeded my expectations. Would recommend!</p>
+		</div>
+		</div>
+		<div class="product">
+			<img src="img/m7.png" alt="product5"> 
+			<p>Dior Pure Poison</p>
+		</div>
+	</div>
+	<hr>
+	<div>
+		<img src="img/user9.png" alt="User6">
+		<div class="fullRating">
+		<div class="ratingC">
+		<span class="rating">★</span><span class="star-empty">☆☆☆☆</span>
+		</div>
+		<div class="text">
+			<pre><br><strong>Ahmed:</strong></pre>
+			<p>Very disappointed, the product didn’t match the description.</p>
+		</div>
+		</div>
+		<div class="product">
+			<img src="img/e2.png" alt="product6"> 
+			<p>Beurer Diagnostic Scale</p>
+		</div>
+	</div>
+	</aside>
+
+</main>
+
+<footer>
+	<p id="copyRights">&copy;2024/ShopSphere comapny.<br> all rights are reserved</p>
+	
+		<p>
+			<img src="img/phone.png" alt="phone">
+			(123) 456-7890
+		</p>
+			
+		<p>
+			<img src="img/Email.png" alt="email">
+			<a href="mailto:shopSphere@gmail.com">shopSphere@gmail.com</a>
+		</p>
+	
+	<div id="socialMedia">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="img/insta.png" alt="Instagram">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="img/x.png" alt="X (formerly Twitter)">
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank">
+            <img src="img/whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+  <hr>
+</footer>
+
+<script src="DScript.js"></script>
+
+</body>
+</html>

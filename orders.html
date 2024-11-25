@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Orders</title>
+    <link rel="stylesheet" href="web.css">
+    <style>
+        .product-list {
+            margin-top: 60px;
+        }
+
+        .order-list {
+            margin-top: 50px;
+        }
+
+        .order {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .order-header {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .product img {
+            width: 200px;
+            height: 200px;
+            margin-right: 20px;
+        }
+
+        .product-details {
+            flex-grow: 3;
+        }
+
+        .button {
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition-duration: 0.5s;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .order-summary {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+
+       
+        nav {
+            padding-left: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        nav li.current a {
+            text-decoration: underline;
+            text-decoration-color: #D5006D;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: inherit;
+            padding: 5px; 
+        }
+        .search-bar label {
+            margin:10px;
+            
+        }
+    </style>
+</head>
+<body>
+<header>
+ <div>
+  <h1> <img src="img/logo.png" alt="logo" class="logo"> ShopSphere</h1>
+  <a href="cart.html"><img src="img/cart.png" alt="cart" class="cart"></a>
+ </div>
+
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="HomePage.html" accesskey="h">Home</a></li>
+            <li><a href="user.html" accesskey="c"  class="currentPage">Customer page</a></li>
+            <li><a href="SellerDashboard.html" accesskey="s">Seller dashboard</a></li>
+            <li><a href="electronic.html" accesskey="e">Electronics</a></li>
+            <li><a href="makeUP.html" accesskey="m" >Makeup</a></li>
+            <li><a href="perfume.html" accesskey="p">Perfumes</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <div class="breadcrumb">
+        <a href="Homepage.html" accesskey="h">Home </a>
+    <span>&gt;&gt;</span>
+    <a href="user.html">Customer page </a>
+    <span>&gt;&gt;</span>
+    <span id="thispage">Order page</span>
+</div> 
+
+<div class="container">
+    <div class="search-bar">
+        <label for="search-orders">Search for a previous order:</label>
+        <select id="search-orders">
+            <option>Order 1</option>
+            <option>Order 2</option>
+          
+        </select>
+    </div>
+
+    <div class="order-list">
+        <div class="order">
+            <div class="order-header">
+                <div class="product">
+                    <img src="img/p1.png" alt="Dior lipgloss">
+                    <div class="product-details">
+                        <p>Dior Lip Maximizer</p>
+                        <p>Plumping Gloss - Instant and Long-Term Volume Effect - 24h Hydration</p>
+                        <p>Price: <span>190 SR</span></p>
+                        <p>Serial Number: <span>20345</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-summary">
+                <p>Purchased  On: <span>31 Sep 3:45 pm</span></p>
+               
+            </div>
+            <a href="cart.html" class="button">
+                <img src="img/cart.png" alt="cart">
+            </a>
+        </div>
+
+        <div class="order">
+            <div class="order-header">
+                <div class="product">
+                    <img src="img/e7.png" alt="Apple watch">
+                    <div class="product-details">
+                        <p>Apple Watch</p>
+                        <p>Watch Series 9 GPS 45mm Starlight Aluminium Case With Starlight Sport Band.</p>
+                      <p>Total Price: <span>1469SR</span></p>
+                        <p>Serial Number: <span>34567</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-summary">
+                <p>Purchased  On: <span>31 Sep 3:45 pm</span></p>
+
+             
+            </div>
+            <a href="cart.html" class="button">
+                <img src="img/cart.png" alt="cart">
+            </a>
+        </div>
+
+        <div class="order">
+            <div class="order-header">
+                <div class="product">
+                    <img src="img/m1.png" alt="Yves Saint Laurent Libre">
+                    <div class="product-details">
+                        <p>Yves Saint Laurent Libre</p>
+                        <p>Libre is the perfume of a strong, bold, and free woman experimenting with her freedom to live everything extremely - Eau De Parfum 90ml</p>
+                        <p>Price: <span> 750 SR</span></p>
+                        <p>Serial Number: <span>23478</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-summary"> 
+ <p>Purchased  On: <span>31 Sep 3:45 pm</span></p>
+             <p><I>total order1 price:2409 SR</i></p> 
+            </div>
+            <a href="cart.html" class="button">
+                <img src="img/cart.png" alt="cart">
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+ <p id="copyRights">&copy;2024/ShopSphere comapny.<br> all rights are reserved</p>
+ 
+  <p>
+   <img src="img/phone.png" alt="phone">
+   (123) 456-7890
+  </p>
+   
+  <p>
+   <img src="img/Email.png" alt="email">
+   <a href="mailto:shopSphere@gmail.com">shopSphere@gmail.com</a>
+  </p>
+ 
+ <div id="socialMedia">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="img/insta.png" alt="Instagram">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="img/x.png" alt="X (formerly Twitter)">
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank">
+            <img src="img/whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+  <hr>
+</footer>
+
+
+</body>
+</html>

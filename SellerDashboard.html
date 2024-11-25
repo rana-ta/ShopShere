@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width , initial-scale=1"  >
+			<title>Seller Dashboard</title>
+			<link rel="stylesheet" href="web.css" >
+			<script src="script.js"> </script>
+			<style>
+				
+                
+				#header-container1{
+				position: static;
+				display: flex;
+				align-items: center;
+				gap: 1.25em;
+				width: 50%;
+				border: 1px double #f1dae3;
+				box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
+				border-radius: 4%;
+				margin: 1.25em 0 3.125em 0;
+				}
+
+				#sellerlogo {
+				margin-top: 2.5em;
+				margin-left: 1.25em;
+				margin-bottom: 2.5em;
+				border-radius: 10%;
+				height: 9.375em; 
+				width: 9.375em;
+				border: 1px solid #f1dae3;
+				box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
+				position:static
+				}
+
+				#sellerInfo {
+				flex: 1;
+				
+				}
+				
+				#productsList{
+				display: flex;
+				gap: 1.25em;
+				padding: 1.25em;
+				overflow-x: auto;
+				white-space: nowrap;
+				width: 100%;
+				scrollbar-width: thin;
+				scrollbar-color:#f1dae3 #ffffff;
+				
+				}
+				#productsList::-webkit-scrollbar {
+					height: 8px ;
+				}
+
+			    #productsList::-webkit-scrollbar-thumb{
+					background-color: #f1dae3;
+					border-radius: 8px;
+				}
+				#productsList::-webkit-scrollbar-track{
+					background-color: #ffffff;
+				}
+
+				.single-product{
+				background-color: #ffffff;
+				border: 1px solid #ddd;
+				flex: 0 0 12.5em;
+				border-radius: 1.25em;
+				padding: 0.625em;
+				width: 16 em;
+				height: 20 em;
+				flex-direction: column;
+				text-align: center;
+				justify-content: space-between;
+				box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
+				margin: 0.625em;
+				box-sizing: border-box;
+				overflow: hidden;
+				word-wrap: break-word;
+				max-height: 100%;
+
+				
+				}
+
+				.single-product p {
+				font-size: 0.9375em;
+				margin-top:0.625em;
+				margin-bottom:0.625em;
+				overflow-wrap: break-word;
+				word-break: break-word;
+				text-overflow: clip;
+				white-space: normal;
+				overflow: hidden;
+				}
+				.Productimg{
+				border-radius: 10%;	
+				margin-top:0.625em;
+				margin-bottom:0.625em;
+				box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
+				max-width: 100%;
+				height: auto;
+				}
+
+				.single-product h3 {
+				
+				font-size: 1.2em;
+				overflow-wrap: break-word;
+				word-break: break-word;
+				}
+
+		
+				.button { /* CSS for the 2 buttons */
+				padding:  0.625em 1.25em;
+				font-size: 1.25em;
+				cursor: pointer;
+				text-align: center;
+				text-decoration: none;
+				margin: 0.25em 0.1875em;
+				border-radius:  0.625em;
+				min-width: 12.5em;
+				width: 2.5em;
+				height: 3.5em;
+				line-height: 1.875em;
+				}
+				
+				
+				
+				.buttons{/* CSS for the buttons container*/
+				display: flex;
+				position: static;
+				justify-content: center;
+				align-items: center;
+				height: 30vh;
+				gap: 18.75em;
+				}
+
+				
+				
+			</style>
+			 
+		</head>
+		<body>
+			<header>
+				<div>
+					<h1> <img src="img/logo.png" alt="logo" class="logo"> ShopSphere</h1>
+					<a href="cart.html"><img src="img/cart.png" alt="cart" class="cart"></a>
+				</div>
+			
+			 <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="HomePage.html" accesskey="h">Home</a></li>
+            <li><a href="user.html" accesskey="c" >Customer page</a></li>
+            <li><a href="SellerDashboard.html" accesskey="s"  class="currentPage">Seller dashboard</a></li>
+            <li><a href="electronic.html" accesskey="e">Electronics</a></li>
+            <li><a href="makeUP.html" accesskey="m" >Makeup</a></li>
+            <li><a href="perfume.html" accesskey="p">Perfumes</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="breadcrumb">
+        <a href="Homepage.html" accesskey="h">Home</a><span> &gt;&gt;</span><span id="thispage"> Seller Dashboard</span> 
+				</div>
+
+				<div id='header-container1'>   
+					<img id="sellerlogo" src="img/diorlogo3.png" alt="Dior logo" width = "150" height = "150">
+					<div id='sellerInfo'>
+						<h1>Christian Dior</h1>
+					</div>
+				</div>  
+
+				<hr style="margin-top: 1.25em;
+				margin-bottom: 1.25em;
+				height: 0.3125em;
+				background-color: rgba(198, 111, 127, 1);
+				width:100%;">
+
+				<h2 style="margin-left: 1.25em;">Products List</h2>
+				
+				<div id='productsList'> </div>
+				
+
+				<br><br>
+					
+				<hr style="margin-top: 1.25em;
+				margin-bottom: 1.25em;
+				height: 0.3125em;
+				background-color: rgba(198, 111, 127, 1);
+				width:100%;">
+
+				<div class="buttons">
+					<a href="Add-New-Product.html" class="button" >Add a new Product</a>
+					<a href="Make-Delete-Offer.html" class="button"> Make/Delete Offer</a>
+							
+				</div>
+				
+					
+			</main>
+				
+			
+			<footer>
+				<p id="copyRights">&copy;2024/ShopSphere comapny.<br> all rights are reserved</p>
+				
+					<p>
+						<img src="img/phone.png" alt="phone">
+						(123) 456-7890
+					</p>
+						
+					<p>
+						<img src="img/Email.png" alt="email">
+						<a href="mailto:shopSphere@gmail.com">shopSphere@gmail.com</a>
+					</p>
+				
+				<div id="socialMedia">
+					<a href="https://www.instagram.com" target="_blank">
+						<img src="img/insta.png" alt="Instagram">
+					</a>
+					<a href="https://www.twitter.com" target="_blank">
+						<img src="img/x.png" alt="X (formerly Twitter)">
+					</a>
+					<a href="https://www.whatsapp.com" target="_blank">
+						<img src="img/whatsapp.png" alt="WhatsApp">
+					</a>
+				</div>
+			  <hr>
+			</footer>
+				
+		</body>
+	</html>

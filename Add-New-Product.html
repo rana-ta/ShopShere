@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width , initial-scale=1"  >
+
+			<title>Add a new Product</title>
+			<link rel="stylesheet" href="web.css" >
+			<script src="script2.js"> </script>
+
+			<style>
+				
+				#header-container1{
+				position: static;
+				display: flex;
+				align-items: center;
+				gap: 1.25em;
+				width: 50%;
+				border: 1px double #f1dae3;
+				box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
+				border-radius: 4%;
+				margin: 1.25em 0 3.125em 0;
+				}
+
+                
+				#sellerlogo {
+				margin-top: 2.5em;
+				margin-left: 1.25em;
+				margin-bottom: 2.5em;
+				border-radius: 10%;
+				height: 9.375em; 
+				width: 9.375em;
+				border: 1px solid #f1dae3;
+				box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
+				position:static
+				}
+
+				#sellerInfo {
+				flex: 1;
+				
+				}
+			
+				
+				#form-container {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 5.625em; 
+				margin: 0.625em; 
+				}
+
+				.form-column {
+				display: flex;
+				flex-direction: column;
+				}
+				
+				label {
+				margin-bottom: 0.3125em; 
+				}
+
+				input[type="text"], select, input[type="file"] {
+				padding: 0.5em; 
+				margin-bottom: 1.25em;
+				border: 1px solid ;
+				border-radius:0.25em;
+				width: 100%;
+				 
+				}
+
+
+				
+				
+				input[type="submit"] {
+				padding: 0.625em  1.25em;
+				background-color: rgba(198, 111, 127, 1);
+				border: 0.125em solid rgba(198, 111, 127, 1);
+				color:white;
+				transition-duration: 0.5s;
+				border-radius: 0.625em; 
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				margin: 0.25em  0.125em;
+				cursor: pointer;
+
+				
+				}
+
+				input[type="submit"]:hover {
+					background-color: #f1dae3;
+					color: #081833;
+				
+				}
+
+				form {
+				width: 100%;
+				margin: 0 auto;
+				}
+
+				fieldset {
+				border: 0.1875em solid #f1dae3;
+				padding: 2.5em;
+				margin-left: 0.625em; 
+				margin-right: 0.625em; 
+				}
+				
+			</style> 
+		</head>
+		
+		<body>
+			<header>
+				
+				<div>
+					<h1> <img src="img/logo.png" alt="logo" class="logo"> ShopSphere</h1>
+					<a href="cart.html"><img src="img/cart.png" alt="cart" class="cart"></a>
+				</div>
+				
+				 <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="HomePage.html" accesskey="h">Home</a></li>
+            <li><a href="user.html" accesskey="c" >Customer page</a></li>
+            <li><a href="SellerDashboard.html" accesskey="s"  class="currentPage">Seller dashboard</a></li>
+            <li><a href="electronic.html" accesskey="e">Electronics</a></li>
+            <li><a href="makeUP.html" accesskey="m" >Makeup</a></li>
+            <li><a href="perfume.html" accesskey="p">Perfumes</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <div class="breadcrumb">
+        <a href="Homepage.html" accesskey="h">Home</a><span> &gt;&gt;</span><a href="SellerDashboard.html">Seller Dashboard</a> <span> &gt;&gt;</span><span id="thispage">Add a New Product</span>
+			</div>
+
+			 
+				<div id='header-container1'>   
+					<img id="sellerlogo" src="img/diorlogo3.png" alt="Dior logo" width = "150" height = "150">
+
+					<div id='sellerInfo'>
+				  		 <h1>Christian Dior</h1>
+				   </div>
+		  		</div>  
+
+			<main>
+
+				<hr style="margin-top: 1.25em;
+				margin-bottom: 1.25em;
+				height: 0.3125em;
+				background-color: rgba(198, 111, 127, 1);
+				width:100%;">
+			   
+			   <br><br><br>
+
+				<form  id="addProductForm" enctype="multipart/form-data" method="post">
+						
+					<fieldset class="group">
+
+						<legend style="font-size: larger; font-family:Garamond;color: #081833;">Add a New Product</legend>
+
+							<div id="form-container">
+								<div class="form-column">
+									<label for="name">Product name:</label>
+									<input type="text" id="name" name="name" value=""><br><br>
+									
+									<label for="image">Product image:</label>
+									<input type="file" id="image" name="image" accept="image/*"><br>
+
+									<label for="price">Price:</label>
+									<input type="text" id="price" name="price" placeholder="0000 SR"><br><br>
+								</div>
+
+								<div class="form-column">
+									<label for="Category">Choose a Category:</label>
+									<select id="Category" name="Category"> 
+									<option value="category1">Perfume</option>
+									<option value="category2">MakeUp</option>
+									<option value="category3">Electronics</option>
+									</select>
+									<br><br>
+
+									<label for="Quantity">Quantity:</label>
+									<input type="text" id="Quantity" name="Quantity" value=""><br><br>
+									
+									<label for="Description">Description:</label>
+									<input type="text" id="Description" name="Description" value=""><br><br>
+								</div>
+							</div>
+						<br>
+					  <input type="submit" value="Add Product" >
+					
+					</fieldset>
+				</form> 
+				<br><br><br><br><br><br>
+				
+			
+			</main>
+			<br>
+		
+			<footer>
+				<p id="copyRights">&copy;2024/ShopSphere comapny.<br> all rights are reserved</p>
+				
+					<p>
+						<img src="img/phone.png" alt="phone">
+						(123) 456-7890
+					</p>
+						
+					<p>
+						<img src="img/Email.png" alt="email">
+						<a href="mailto:shopSphere@gmail.com">shopSphere@gmail.com</a>
+					</p>
+				
+				<div id="socialMedia">
+					<a href="https://www.instagram.com" target="_blank">
+						<img src="img/insta.png" alt="Instagram">
+					</a>
+					<a href="https://www.twitter.com" target="_blank">
+						<img src="img/x.png" alt="X (formerly Twitter)">
+					</a>
+					<a href="https://www.whatsapp.com" target="_blank">
+						<img src="img/whatsapp.png" alt="WhatsApp">
+					</a>
+				</div>
+			 <hr>
+			</footer>
+		</body>
+	</html>
